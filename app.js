@@ -211,7 +211,7 @@ class VitalsAnimator {
       { src: '/16766421982683.jpg', title: 'El corazón también trabaja', desc: 'Un guerrero que labora hasta 3,000 millones de latidos a lo largo de toda una vida' },
       { src: '/Constantes-Vitales.jpg', title: 'Chequeo médico: el radar silencioso de tu salud', desc: 'Escucha tu corazón antes de que grite. ¡Haz tu chequeo!' },
       { src: '/Hipertension-arterial.jpg', title: 'Gracias, Riva-Rocci', desc: 'por enseñarnos a escuchar el corazón con cifras' },
-      { src: '/hiperttenesos.jpg', title: 'Temperatura Normal', desc: '36.1°C - 37.2°C' },
+      { src: '/temperatura_normal.jpg', title: 'Temperatura Normal', desc: '36.1°C - 37.2°C' },
       { src: '/midiendo-pulso.jpg', title: 'Hipertensión Arterial', desc: 'Presión arterial superior a 120/80 mmHg' },
       { src: '/ENFERMERIA_¿En-que-brazo-se-toma-la-tension-arterial-.jpg', title: 'Brazo izquierdo, decisión inteligente', desc: '¡Cuida tu presión, cuida tu corazón!' }
       
@@ -1860,3 +1860,4 @@ class DynamicHealthChecker {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { VitalsApp, VitalsAnimator, vitals, NavigationManager, DynamicHealthChecker };
 }
+
