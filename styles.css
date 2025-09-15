@@ -1323,16 +1323,22 @@ body.nav-open {
 /* Simulation */
 .simulation {
   background: var(--color-rosado);
-  padding: var(--espacio-lg);
+  padding: 5px;
   border-radius: var(--border-radius-lg);
   margin: var(--espacio-xl) 0;
   text-align: center;
+  width: 100%;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .simulation h3 {
-  margin-bottom: var(--espacio-md);
+  margin-bottom: 10px;
   color: var(--color-texto-primario);
+  text-align: center;
 }
+
 
 .simulation-controls {
   display: flex;
@@ -1596,16 +1602,6 @@ body.nav-open {
     flex-direction: column;
     align-items: center;
   }
-
-  /* Modal de integrantes - responsive tablet */
-  .team-modal {
-    width: 380px;
-    height: 380px;
-  }
-
-  .team-member-name {
-    font-size: 0.95rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1675,28 +1671,6 @@ body.nav-open {
   .carousel-indicator {
     width: 14px;
     height: 14px;
-  }
-  
-  /* Modal de integrantes - responsive móvil */
-  .team-modal {
-    width: 320px;
-    height: 320px;
-    padding: var(--espacio-sm);
-  }
-
-  .team-member-name {
-    font-size: 0.85rem;
-    line-height: 1.2;
-  }
-
-  .team-modal-title {
-    font-size: 1.1rem;
-    margin-bottom: var(--espacio-sm);
-  }
-
-  .team-grid {
-    gap: 6px;
-    height: calc(100% - 60px);
   }
 }
 
@@ -2013,22 +1987,14 @@ button:focus,
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  padding: var(--espacio-lg);
+  border-radius: var(--border-radius-lg);
 }
 
 .simulation-info:hover {
   background: var(--color-rojo-palido);
   transform: translateY(-2px);
   box-shadow: var(--sombra-hover);
-}
-
-.simulation-info::after {
-  content: '👥 Click para ver';
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 0.8rem;
-  color: var(--color-texto-secundario);
-  opacity: 0.7;
 }
 
 /* Sección Dinámica Interactiva */
@@ -2395,6 +2361,38 @@ button:focus,
   .carousel-next {
     right: 30px;
   }
+
+  /* Modal responsive para tablets */
+  .team-modal {
+    width: calc(100vw - 40px);
+    max-width: 400px;
+    height: auto;
+    max-height: calc(100vh - 60px);
+    padding: var(--espacio-lg);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-md);
+    padding: var(--espacio-md);
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+  }
+
+  /* Simulation responsive para tablets */
+  .simulation {
+    max-width: 760px;
+    margin: var(--espacio-xl) auto;
+  }
+
+  .simulation h3 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }
 
 /* Media Queries */
@@ -2588,5 +2586,80 @@ button:focus,
     width: 80%;
     height: auto;
     padding: var(--espacio-sm);
+  }
+
+  /* Modal responsive para móviles */
+  .team-modal-overlay {
+    padding: var(--espacio-xs);
+  }
+
+  .team-modal {
+    width: calc(100vw - 20px);
+    max-width: 350px;
+    height: auto;
+    max-height: calc(100vh - 40px);
+    padding: var(--espacio-md);
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+  }
+
+  .team-modal-overlay.active .team-modal {
+    transform: scale(1);
+  }
+
+  .team-modal-title {
+    font-size: 1.2rem;
+    margin-bottom: var(--espacio-md);
+    text-align: center;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-sm);
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    min-height: 200px;
+    padding: var(--espacio-sm);
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 120px;
+    height: 120px;
+    font-size: 0.8rem;
+  }
+
+  .team-member-name {
+    font-size: 0.75rem;
+    line-height: 1.1;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .team-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Simulation responsive para móviles */
+  .simulation {
+    margin: var(--espacio-lg) auto;
+    padding: var(--espacio-md);
+    max-width: 95%;
+  }
+
+  .simulation h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: var(--espacio-sm);
+  }
+
+  .simulation-info {
+    padding: var(--espacio-md);
   }
 }
