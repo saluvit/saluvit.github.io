@@ -106,7 +106,7 @@ body.nav-open {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: var(--espacio-sm) 0;
+  padding: calc(var(--espacio-sm) + 5px) 0;
 }
 
 .header-content {
@@ -120,7 +120,9 @@ body.nav-open {
 .logo {
   width: 40px;
   height: 40px;
-  fill: var(--color-texto-primario);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-celeste);
 }
 
 .header h1 {
@@ -2351,6 +2353,50 @@ button:focus,
   color: var(--color-texto-secundario);
 }
 
+/* Media Queries para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .carousel-section {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-container {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-image {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-slide {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-title {
+    font-size: 2.2rem;
+  }
+
+  .carousel-desc {
+    font-size: 1.3rem;
+  }
+
+  .carousel-controls {
+    width: 55px;
+    height: 55px;
+  }
+
+  .carousel-prev {
+    left: 30px;
+  }
+
+  .carousel-next {
+    right: 30px;
+  }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   /* Navegación responsive */
@@ -2368,6 +2414,76 @@ button:focus,
 
   .main-nav {
     position: relative;
+  }
+
+  /* Carrusel responsive */
+  .carousel-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-image {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100vw;
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-overlay {
+    padding: var(--espacio-lg);
+  }
+
+  .carousel-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--espacio-sm);
+  }
+
+  .carousel-desc {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .carousel-controls {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-prev {
+    left: 20px;
+  }
+
+  .carousel-next {
+    right: 20px;
+  }
+
+  .carousel-controls svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .carousel-indicators {
+    bottom: 20px;
+    gap: var(--espacio-xs);
+  }
+
+  .carousel-indicator {
+    width: 12px;
+    height: 12px;
+  }
+
+  .carousel-indicator.active,
+  .carousel-indicator:hover {
+    transform: scale(1.2);
   }
 
   /* Responsive para nuevas secciones */
