@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa sobre signos vitales: pulso, respiración, temperatura, presión arterial y saturación de oxígeno">
+    <meta name="keywords" content="signos vitales, salud, medicina, pulso, respiración, temperatura, presión arterial">
+    <title>Signos Vitales — Guía Rápida | Saluvit</title>
+    
+    <!-- Preconnect para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuente Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Anime.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo SVG inline -->
+                <svg class="logo" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L13.09 8.26L22 9L15 14L17.18 22L12 18.74L6.82 22L9 14L2 9L10.91 8.26L12 2Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <h1>Signos Vitales — Guía Rápida</h1>
+            </div>
+            
+            <!-- Navegación -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#hero-section" class="nav-link">Inicio</a></li>
+                    <li><a href="#importance-section" class="nav-link">Importancia</a></li>
+                    <li><a href="#problem-section" class="nav-link">Problema</a></li>
+                    <li><a href="#vitals-section" class="nav-link">Signos Vitales</a></li>
+                    <li><a href="#objectives-section" class="nav-link">Objetivos</a></li>
+                    <li><a href="#solution-section" class="nav-link">Propuesta</a></li>
+                    <li><a href="#prevention-section" class="nav-link">Prevención</a></li>
+                    <li><a href="#dynamic-section" class="nav-link">Dinámica</a></li>
+                </ul>
+                
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Menú lateral móvil -->
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                    <div class="mobile-menu-sidebar" id="mobile-menu-sidebar">
+                        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Cerrar menú">
+                            ×
+                        </button>
+                        <ul class="mobile-nav-list">
+                            <li><a href="#hero-section" class="mobile-nav-link">Inicio</a></li>
+                            <li><a href="#importance-section" class="mobile-nav-link">Importancia</a></li>
+                            <li><a href="#problem-section" class="mobile-nav-link">Problema</a></li>
+                            <li><a href="#vitals-section" class="mobile-nav-link">Signos Vitales</a></li>
+                            <li><a href="#objectives-section" class="mobile-nav-link">Objetivos</a></li>
+                            <li><a href="#solution-section" class="mobile-nav-link">Propuesta</a></li>
+                            <li><a href="#prevention-section" class="mobile-nav-link">Prevención</a></li>
+                            <li><a href="#dynamic-section" class="mobile-nav-link">Dinámica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="container">
+            <div class="hero-waves">
+                <div class="hero-wave" style="width: 400px; height: 400px; animation: radialWave1 3s infinite;"></div>
+                <div class="hero-wave" style="width: 400px; height: 400px; animation: radialWave2 3s infinite 1s;"></div>
+            </div>
+            <img src="Saluvit.jpg" alt="Logo de Saluvit" class="hero-icon" loading="eager">
+            <h2>Comprende tus Signos Vitales</h2>
+            <p>Descubre qué significan los valores normales y las alteraciones de los principales indicadores de salud. Una guía completa con información médica confiable.</p>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section" id="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Las imágenes se cargarán dinámicamente -->
+            </div>
+            
+            <button class="carousel-controls carousel-prev" id="carousel-prev" aria-label="Imagen anterior">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <button class="carousel-controls carousel-next" id="carousel-next" aria-label="Siguiente imagen">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                </svg>
+            </button>
+            
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Los indicadores se generarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main" id="main-content">
+        <div class="container">
+            
+            <!-- Sección Importancia del Monitoreo -->
+            <section class="importance-section" id="importance-section" aria-labelledby="importance-title">
+                <h2 id="importance-title" class="section-title">¿Por Qué es Importante el Monitoreo?</h2>
+                <p class="section-subtitle">Los signos vitales son indicadores esenciales que permiten detectar alteraciones fisiológicas de manera temprana</p>
+                
+                <div class="importance-grid">
+                    <div class="importance-card primary">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"/></svg>
+                        </div>
+                        <h3>Detección Temprana</h3>
+                        <p>Permite identificar enfermedades silenciosas antes de que se conviertan en problemas graves</p>
+                        <ul class="benefits-list">
+                            <li>Prevención de hipertensión</li>
+                            <li>Detección precoz de diabetes</li>
+                            <li>Problemas cardiovasculares</li>
+                            <li>Trastornos respiratorios</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="importance-card secondary">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2M2 17L12 22L22 17M2 12L12 17L22 12"/></svg>
+                        </div>
+                        <h3>Situación en El Salvador</h3>
+                        <p>Se observa un incremento preocupante de factores de riesgo en jóvenes</p>
+                        <div class="risk-factors">
+                            <span class="risk-tag">Sedentarismo</span>
+                            <span class="risk-tag">Alimentación poco saludable</span>
+                            <span class="risk-tag">Uso excesivo de dispositivos</span>
+                            <span class="risk-tag">Baja actividad física</span>
+                            <span class="risk-tag">Falta de cultura preventiva</span>
+                        </div>
+                    </div>
+                    
+                    <div class="importance-card accent">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17 12H19A7 7 0 0 0 5 12H7A5 5 0 0 1 17 12M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20A8 8 0 0 1 4 12A8 8 0 0 1 12 4Z"/></svg>
+                        </div>
+                        <h3>Grupo de Enfoque</h3>
+                        <p>Adultos jóvenes de 20 a 24 años, un grupo que suele descuidar su salud preventiva</p>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <span class="stat-number">20-24</span>
+                                <span class="stat-label">Años de edad</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">El Salvador</span>
+                                <span class="stat-label">Población objetivo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Problema Identificado -->
+            <section class="problem-section" id="problem-section" aria-labelledby="problem-title">
+                <h2 id="problem-title" class="section-title">Problema Identificado</h2>
+                <p class="section-subtitle">Los adultos jóvenes subestiman la necesidad del cuidado preventivo</p>
+                
+                <div class="problem-container">
+                    <div class="problem-main">
+                        <div class="problem-question">
+                            <h3>❓ Pregunta Clave</h3>
+                            <blockquote>
+                                ¿Cómo fomentar en los adultos jóvenes (20-24 años) la importancia del monitoreo regular de sus signos vitales?
+                            </blockquote>
+                        </div>
+                        
+                        <div class="problem-causes">
+                            <h3>🚨 Principales Causas</h3>
+                            <div class="causes-grid">
+                                <div class="cause-item">
+                                    <div class="cause-icon">💭</div>
+                                    <h4>Falsa Seguridad</h4>
+                                    <p>Creencia de que por su edad están libres de riesgos médicos</p>
+                                </div>
+                                <div class="cause-item">
+                                    <div class="cause-icon">📚</div>
+                                    <h4>Falta de Información</h4>
+                                    <p>Escasa información institucional y campañas educativas</p>
+                                </div>
+                                <div class="cause-item">
+                                    <div class="cause-icon">⚕️</div>
+                                    <h4>Modelo Reactivo</h4>
+                                    <p>Solo buscan atención médica cuando hay síntomas evidentes</p>
+                                </div>
+                                <div class="cause-item">
+                                    <div class="cause-icon">🏥</div>
+                                    <h4>Automedicación</h4>
+                                    <p>Dependencia de la automedicación sin supervisión médica</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-consequences">
+                        <h3>⚠️ Consecuencias</h3>
+                        <ul class="consequences-list">
+                            <li>
+                                <span class="consequence-icon">🔍</span>
+                                <strong>Detección tardía</strong> de enfermedades silenciosas
+                            </li>
+                            <li>
+                                <span class="consequence-icon">🎯</span>
+                                <strong>Mayor exposición</strong> a complicaciones graves
+                            </li>
+                            <li>
+                                <span class="consequence-icon">📊</span>
+                                <strong>Incremento de vulnerabilidad</strong> a enfermedades cardiovasculares
+                            </li>
+                            <li>
+                                <span class="consequence-icon">🔄</span>
+                                <strong>Perpetuación del modelo reactivo</strong> de salud
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Signos Vitales -->
+            <section id="vitals-section" aria-labelledby="vitals-title">
+                <h2 id="vitals-title" class="section-title">Los 5 Signos Vitales Principales</h2>
+                <div id="vitals-container" class="vitals-grid">
+                    <!-- Las tarjetas se generarán dinámicamente con JavaScript -->
+                </div>
+            </section>
+
+            <!-- Sección Objetivos del Proyecto -->
+            <section class="objectives-section" id="objectives-section" aria-labelledby="objectives-title">
+                <h2 id="objectives-title" class="section-title">Objetivos del Proyecto</h2>
+                <p class="section-subtitle">Brindar conocimiento sobre la importancia del monitoreo de signos vitales</p>
+                
+                <div class="objectives-container">
+                    <div class="objective-general">
+                        <div class="objective-header">
+                            <span class="objective-badge">Objetivo General</span>
+                            <h3>🎯 Misión Principal</h3>
+                        </div>
+                        <p>Brindar conocimiento sobre la importancia del monitoreo de los signos vitales en adultos jóvenes salvadoreños de 20 a 24 años.</p>
+                    </div>
+                    
+                    <div class="objectives-specific">
+                        <h3>📋 Objetivos Específicos</h3>
+                        <div class="specific-grid">
+                            <div class="specific-card">
+                                <div class="specific-icon">📊</div>
+                                <h4>Evaluar Conocimiento</h4>
+                                <p>Evaluar el nivel de conocimiento actual de los jóvenes mediante encuestas estructuradas</p>
+                            </div>
+                            <div class="specific-card">
+                                <div class="specific-icon">📈</div>
+                                <h4>Analizar Impacto</h4>
+                                <p>Analizar el impacto de intervenciones educativas, charlas y demostraciones prácticas</p>
+                            </div>
+                            <div class="specific-card">
+                                <div class="specific-icon">🎨</div>
+                                <h4>Crear Materiales</h4>
+                                <p>Crear materiales visuales e interactivos: infografías, ruletas de preguntas y códigos QR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Propuesta de Solución -->
+            <section class="solution-section" id="solution-section" aria-labelledby="solution-title">
+                <h2 id="solution-title" class="section-title">Propuesta de Solución</h2>
+                <p class="section-subtitle">Intervención educativa integral con tecnología digital</p>
+                
+                <div class="solution-content">
+                    <div class="solution-intro">
+                        <h3>🏫 Evento: Crea J - Colegio Don Bosco</h3>
+                        <p>Una intervención educativa innovadora que combina sesiones presenciales con tecnología digital para sensibilizar a los jóvenes sobre la medicina preventiva.</p>
+                    </div>
+                    
+                    <div class="solution-components">
+                        <div class="component-card">
+                            <div class="component-header">
+                                <span class="component-icon">🎓</span>
+                                <h4>Sesiones Educativas</h4>
+                            </div>
+                            <ul>
+                                <li>Charlas sobre signos vitales y su importancia</li>
+                                <li>Explicación de valores normales y alteraciones</li>
+                                <li>Casos prácticos y ejemplos reales</li>
+                                <li>Metodología interactiva y participativa</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component-card">
+                            <div class="component-header">
+                                <span class="component-icon">🔬</span>
+                                <h4>Demostraciones Prácticas</h4>
+                            </div>
+                            <ul>
+                                <li>Uso de tensiómetros digitales</li>
+                                <li>Medición con oxímetros de pulso</li>
+                                <li>Termómetros digitales precisos</li>
+                                <li>Estetoscopios para auscultación</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component-card">
+                            <div class="component-header">
+                                <span class="component-icon">💻</span>
+                                <h4>Tecnología Digital</h4>
+                            </div>
+                            <ul>
+                                <li>Códigos QR vinculados a redes sociales</li>
+                                <li>Videos explicativos en Instagram y TikTok</li>
+                                <li>Contenido dinámico y atractivo</li>
+                                <li>Plataforma web educativa interactiva</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component-card">
+                            <div class="component-header">
+                                <span class="component-icon">🎯</span>
+                                <h4>Materiales Didácticos</h4>
+                            </div>
+                            <ul>
+                                <li>Infografías visuales y comprensibles</li>
+                                <li>Ruletas de preguntas interactivas</li>
+                                <li>Guías rápidas de referencia</li>
+                                <li>Material accesible y fácil de usar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Prevención Temprana -->
+            <section class="prevention-section" id="prevention-section" aria-labelledby="prevention-title">
+                <h2 id="prevention-title" class="section-title">Prevención Temprana</h2>
+                <p class="section-subtitle">La estrategia más efectiva para reducir enfermedades crónicas</p>
+                
+                <div class="prevention-content">
+                    <div class="prevention-benefits">
+                        <h3>✨ Beneficios de la Prevención</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🛡️</div>
+                                <h4>Protección Proactiva</h4>
+                                <p>La prevención temprana es la estrategia más efectiva para reducir la carga de enfermedades crónicas</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎯</div>
+                                <h4>Formación de Hábitos</h4>
+                                <p>Promover el autocuidado en jóvenes contribuye a formar adultos más conscientes y responsables</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💝</div>
+                                <h4>Calidad de Vida</h4>
+                                <p>El monitoreo regular mejora la calidad de vida a largo plazo y previene complicaciones</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📚</div>
+                                <h4>Educación en Salud</h4>
+                                <p>Permite combatir la desinformación y fomenta una cultura de prevención efectiva</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prevention-impact">
+                        <h3>🎯 Impacto Esperado</h3>
+                        <div class="impact-list">
+                            <div class="impact-item">
+                                <span class="impact-number">01</span>
+                                <div class="impact-content">
+                                    <h4>Transformar Percepción</h4>
+                                    <p>Cambiar la percepción de los jóvenes sobre la medicina preventiva</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-number">02</span>
+                                <div class="impact-content">
+                                    <h4>Generar Conciencia</h4>
+                                    <p>Sensibilizar sobre la importancia del autocuidado desde temprana edad</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-number">03</span>
+                                <div class="impact-content">
+                                    <h4>Prevenir Enfermedades</h4>
+                                    <p>Reducir la incidencia de enfermedades crónicas en la población joven</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-number">04</span>
+                                <div class="impact-content">
+                                    <h4>Beneficio Económico</h4>
+                                    <p>Reducir costos en salud pública a través de la prevención</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Resumen Visual -->
+            <section class="summary" aria-labelledby="summary-title">
+                <h2 id="summary-title" class="section-title">Resumen Visual</h2>
+                <p class="text-center mb-lg">Explora todos los valores normales y alteraciones de los signos vitales</p>
+                
+                <div class="filter-buttons" role="group" aria-label="Filtros de contenido">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="normal">Valores Normales</button>
+                    <button class="filter-btn" data-filter="alteration">Alteraciones</button>
+                </div>
+                
+                <div id="summary-grid" class="summary-grid">
+                    <!-- Las tarjetas de resumen se generarán dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Sección de Simulación -->
+            <section class="simulation" aria-labelledby="simulation-title"  id="simulation-info">
+                <div class="simulation-info">
+                <h3 id="simulation-title">Integrantes del grupo</h3>
+                <p class="mb-md">pulse sobre este recuadro para descubrir a las personas que hicieron posible este proyecto</p>
+                <div class="simulation-controls">
+                    <!-- <button id="simulate-all" class="btn btn-primary">Simular Lectura</button> -->
+                </div>
+                </div>
+            </section>
+
+            <!-- Sección Dinámica Interactiva -->
+            <section class="dynamic-section" id="dynamic-section" aria-labelledby="dynamic-title">
+                <div class="dynamic-container">
+                    <button class="dynamic-home-btn" id="dynamic-home-btn" aria-label="Volver al inicio" title="Reiniciar dinámica">
+                        🏠
+                    </button>
+                    
+                    <div class="dynamic-content">
+                        <div class="dynamic-emoji">
+                            <img id="dynamic-emoji-img" src="emojiefeliz.png" alt="Emoji feliz" class="emoji-image">
+                        </div>
+                        
+                        <div class="dynamic-card">
+                            <div id="dynamic-card-content">
+                                <h3>¡Descubre tu Estado de Salud! 🎯</h3>
+                                <p>Te invitamos a participar en una dinámica especial donde podrás conocer si tus signos vitales están dentro de los rangos normales para tu edad.</p>
+                                <p>Es rápido, educativo y completamente seguro. ¿Te animas a probar?</p>
+                                <div class="dynamic-buttons">
+                                    <button class="btn btn-primary" id="accept-dynamic-btn">¡Sí, quiero probar!</button>
+                                    <button class="btn btn-secondary" id="decline-dynamic-btn">No, gracias</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Saluvit - Educación en Salud</p>
+            <p>Desarrollado con fines educativos e informativos</p>
+            <p class="footer-note">"Estos son signos vitales"</p>
+            <br>
+            <p><h6><i>Las imagenes presentadas son propiedad de sus respectivas fuentes, agradecimientos especiales a Bupa Latinoamerica, Centro Medico ABC, Kids Health, Mass medicos entre muchas otras mas fuentes visuales que hicieron posible este sitio.</i></h6></p>
+            
+                <p><h6>Diego Chávez - 2 DSW - Desarrollador</h6></p>
+        </div>
+    </footer>
+
+    <!-- Modal de Integrantes del Grupo -->
+    <div class="team-modal-overlay" id="team-modal-overlay">
+        <div class="team-modal" id="team-modal">
+            <button class="team-modal-close" id="team-modal-close" aria-label="Cerrar modal"></button>
+            <h3 class="team-modal-title">Juegos de Saluvit</h3>
+            <div class="team-grid">1
+                <!-- Los cuadros se generan dinámicamente con orden aleatorio -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="app.js"></script>
+</body>
+</html>
